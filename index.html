@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À QUI LA FAUTE ?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Écran d'accueil -->
+        <div id="welcome-screen" class="screen active">
+            <h1>À QUI LA FAUTE ?</h1>
+            <button id="start-button">Nouvelle Partie</button>
+            <button id="rules-button">Règles du Jeu</button>
+        </div>
+
+        <!-- Écran de configuration -->
+        <div id="setup-screen" class="screen">
+            <h2>Configuration de la partie</h2>
+            <div class="player-setup">
+                <label for="player-count">Nombre de joueurs :</label>
+                <select id="player-count">
+                    <option value="3">3 joueurs</option>
+                    <option value="4">4 joueurs</option>
+                    <option value="5">5 joueurs</option>
+                    <option value="6">6 joueurs</option>
+                    <option value="7">7 joueurs</option>
+                    <option value="8">8 joueurs</option>
+                </select>
+            </div>
+            <button id="start-game">Commencer la partie</button>
+            <button class="back-button">Retour</button>
+        </div>
+
+        <!-- Écran de jeu -->
+        <div id="game-screen" class="screen">
+            <div id="turn-info"></div>
+            <div id="mission-container"></div>
+            <div id="timer"></div>
+            <div id="actions"></div>
+        </div>
+
+        <!-- Écran des règles -->
+        <div id="rules-screen" class="screen">
+            <h2>Règles du Jeu</h2>
+            <div class="rules-content">
+                <p>À QUI LA FAUTE ? est un jeu de déduction et de sabotage où chaque joueur reçoit un rôle secret.</p>
+                <h3>Déroulement :</h3>
+                <ol>
+                    <li>Chaque joueur reçoit un rôle secret et un pouvoir spécial</li>
+                    <li>À votre tour, vous avez 30 secondes pour accomplir une mission</li>
+                    <li>Certains joueurs doivent saboter discrètement les missions</li>
+                    <li>Après chaque tour, les joueurs peuvent discuter et voter</li>
+                </ol>
+            </div>
+            <button class="back-button">Retour</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
